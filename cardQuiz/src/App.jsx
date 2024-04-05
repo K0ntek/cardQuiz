@@ -58,8 +58,8 @@ function App() {
         <form onSubmit={handleSubmit} className='my-10 space-y-4 w-fit mx-auto'>
             <div className='flex flex-wrap space-x-4'>
             <div className=' text-xl mx-auto text-center'>
-                      <label htmlFor="category">Category: </label>
-                      <select id="category" ref={categoryEl} className=' w-[200px] text-white bg-[#090909] focus:outline-none border-[1px] border-white rounded-lg p-2'>
+                      <label htmlFor="category">Category: </label><br />
+                      <select id="category" ref={categoryEl} className=' w-[200px] text-white bg-[#090909] focus:outline-none border-[1px] border-white rounded-full p-2'>
                         {categories.map((category, i)=>{
                           return(
                             <option value={category.id} className='text-white'>{category.name}</option>
@@ -69,17 +69,20 @@ function App() {
                     </div>
 
                     <div className=' text-xl mx-auto text-center'>
-                      <label htmlFor="category">Questions: </label>
-                        <input type="number" id='amount' min={1} step={1} defaultValue={10} ref={amountEl} className=' w-[200px] text-white bg-[#090909] focus:outline-none border-[1px] border-white rounded-lg p-2'/>
+                      <label htmlFor="category">Questions: </label><br />
+                        <input type="number" id='amount' min={1} step={1} defaultValue={10} ref={amountEl} className=' w-[200px] text-white bg-[#090909] focus:outline-none border-[1px] border-white rounded-full p-2'/>
                     </div>
             </div>
 
         <div className=' mx-auto text-center'>
-          <button className='bg-[#0145b3] text-white px-3 py-2 rounded-xl text-xl'>Generate</button>
+          <button className='bg-[#0145b3] hover:bg-[#1945b9] text-white px-3 py-2 rounded-full text-xl'>Generate</button>
         </div>
       </form>
       </div>
        <CardsWrapper cards={cards}/>
+
+       <p className="text-white text-[10px] text-center mt-10">CARDQUIZ 2024 ©
+        <a href="https://jakubkontekcv.onrender.com/" className=" text-[#f24602] font-bold"> JAKUB KONTEK</a></p>
     </div>
   )
 }
