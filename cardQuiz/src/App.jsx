@@ -56,7 +56,7 @@ function App() {
       <div className=''>
         <h1 className='text-center text-3xl tracking-[2px]'>FLASHCARD QUIZ</h1>
         <form onSubmit={handleSubmit} className='my-10 space-y-4 w-fit mx-auto'>
-            <div className='flex flex-wrap space-x-4'>
+            <div className='flex flex-wrap sm:space-x-4 mx-auto text-center justify-center'>
             <div className=' text-xl mx-auto text-center'>
                       <label htmlFor="category">Category: </label><br />
                       <select id="category" ref={categoryEl} className=' w-[200px] text-white bg-[#090909] focus:outline-none border-[1px] border-white rounded-full p-2'>
